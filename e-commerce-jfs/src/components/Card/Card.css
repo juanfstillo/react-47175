@@ -1,0 +1,37 @@
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273) !important;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    border: 1px solid gray;
+    border-radius: 3%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;     
+}
+
+.price {
+    color: rgb(25, 163, 25);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.img {
+    width: 100%;
+}
+
+.button-detail {
+    background-color: #646FD4;
+    width: 70%;
+    border-radius: 18%;
+    margin: 20px 0;
+    height: 3rem;
+    border: none;
+    color: white;
+}
+
+.button-detail:hover {
+    background-color: #242F9B;
+}

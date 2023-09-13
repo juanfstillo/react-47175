@@ -1,24 +1,30 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from 'react'
+import './Card.css'
+import { Link } from 'react-router-dom';
 
 
-
-
-function Tarjeta(props) {
+ const Card = ({item}) => {
+   console.log(item)
+  const {title, img, precio, stock, id} = item
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={"https://images.footballfanatics.com/inter-miami-cf/mens-adidas-lionel-messi-pink-inter-miami-cf-2023-the-heart-beat-kit-authentic-jersey_ss5_p-200387113+u-ghnzrhjj2ienrjequp3b+v-ncsjlxvzp6psrjl5fqrd.jpg?_hv=2&w=340"} />
-      <Card.Body>
-        <Card.Title>{props.titulo}</Card.Title>
-        <Card.Text>
-            {props.descripcion}
-        </Card.Text>
-        <Button variant="primary">Comprar</Button>
-      </Card.Body>
-    </Card>
-  );
+    <div className="card mb-3 m-3">
+      <h3 className="card-header text-center">{title}</h3>
+      <div className="card-body">
+      </div>
+      <img className='' src={img} alt={title}/>
+
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item">Precio: ${precio}</li>
+        <li className="list-group-item">Stock: {stock}</li>
+      </ul>
+
+      <div className="card-footer text-center">
+        <Link to={`/detalles/${id}`}>
+          <button className='btn btn-info'>Ver mas detalles</button>
+        </Link>
+      </div>
+    </div>
+  )
 }
 
-export default Tarjeta;
+export default Card

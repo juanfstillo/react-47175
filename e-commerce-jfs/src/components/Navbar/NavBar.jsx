@@ -6,16 +6,27 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carrito from '../../../src/components/Carrito/Carrito'
-const navegacion = () => {
+import { Link } from 'react-router-dom'
+import Image from 'react-bootstrap/Image';
+import logo from '../../assets/solodeportes.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const Navegacion = () => {
     return (
         <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Solo Deportes</Navbar.Brand>
-          <Navbar.Collapse id="basic-navbar-nav">
+        <Link to='/'> {/* Wrap the Navbar.Brand with Link */}
+          <Navbar.Brand>
+            <Image src={logo} alt="Solo Deportes" />
+          </Navbar.Brand>
+        </Link>          
+            <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link><br></br>
-              <Nav.Link href="#link">Nosotros</Nav.Link>
-              <NavDropdown title="Menu Personal" id="basic-nav-dropdown">
+              <Link className='text-black text-decoration-none mr-2 ml-2 mt-2 ' to='/'>Home</Link>
+              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/futbol'>Futbol</Link>
+              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/tenis'>Tenis</Link>
+              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/natacion'>Natacion</Link>
+              <NavDropdown title="Menu personal" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.2">
                 <Carrito />
                 </NavDropdown.Item>
@@ -31,4 +42,4 @@ const navegacion = () => {
       );    
 }
 
-export default navegacion
+export default Navegacion

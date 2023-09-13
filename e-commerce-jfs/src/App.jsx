@@ -4,23 +4,34 @@ import { useState } from 'react'
 import Navegacion from './components/Navbar/NavBar'
 import Titulo from './components/Titulo/Titulo'
 import Footer from './components/Footer/Footer'
-import Tarjeta from './components/Card/Card'
+import ItemListContainer  from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer  from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css'
+
 const titulo = 'Solo Deportes ⚽'
-const tarjeta = {titulo: "Camiseta Inter Messi",descripcion:"La camiseta del mejor del mundo"} 
 
 
 
 function App() { 
     
     return (
+        <BrowserRouter>
+
         <div>
             <Navegacion /> 
             <Titulo titulo={titulo}/>
-            <Tarjeta titulo={tarjeta.titulo} descripcion={tarjeta.descripcion}/>
+            <div className="container">
+            <Routes>
+                <Route path='/' element={<ItemListContainer/>}/>
+                <Route path='/productos/:categoria' element={<ItemListContainer/>}/>
+                <Route path='/detalles/:id' element={<ItemDetailContainer />}/>
+            </Routes>
+            </div>
             <Footer /> 
         </div>
+        </BrowserRouter>
+
     )
 }
 
