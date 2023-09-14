@@ -22,11 +22,10 @@ const Navegacion = () => {
         </Link>          
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link className='text-black text-decoration-none mr-2 ml-2 mt-2 ' to='/'>Home</Link>
-              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/futbol'>Futbol</Link>
-              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/tenis'>Tenis</Link>
-              <Link className='text-danger text-decoration-none mr-2 ml-2 mt-2 pl-2' to='/productos/natacion'>Natacion</Link>
-              <NavDropdown title="Menu personal" id="basic-nav-dropdown">
+            <Link className='text-secondary text-decoration-none mx-2 mt-2 px-2' to='/productos/futbol'>Futbol</Link>
+            <Link className='text-secondary text-decoration-none mx-2 mt-2 px-2' to='/productos/tenis'>Tenis</Link>
+            <Link className='text-secondary text-decoration-none mx-2 mt-2 px-2' to='/productos/natacion'>Natacion</Link>
+              <NavDropdown className="text-secondary" title="Menu personal" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.2">
                 <Carrito />
                 </NavDropdown.Item>

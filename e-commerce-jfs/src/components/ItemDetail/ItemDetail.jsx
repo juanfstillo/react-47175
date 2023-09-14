@@ -12,8 +12,6 @@ import './ItemDetail.css';
         </div>        
           <div className="card-detail-right text-center">
             <h4>{item.title}</h4>
-            
-          
           </div>          
       </div>
     </>

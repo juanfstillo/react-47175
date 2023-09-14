@@ -4,7 +4,7 @@
 }
 
 .card-detail-left {
-    width: 50%;
+    width: 30%;
 }
 
 .card-detail-right {
@@ -16,7 +16,7 @@
 }
 
 img {
-    width: 200px;
+    width: 150px;
     min-height: 100px;
     float: left;
     margin: 10px;

@@ -7,23 +7,23 @@ import { Link } from 'react-router-dom';
    console.log(item)
   const {title, img, precio, stock, id} = item
   return (
-    <div className="card mb-3 m-3">
+    <div className="col-lg-4 mb-3">
+    <div className="card">
       <h3 className="card-header text-center">{title}</h3>
       <div className="card-body">
+        <img className="img-fluid" src={img} alt={title} />
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item">Precio: ${precio}</li>
+          <li className="list-group-item">Stock: {stock}</li>
+        </ul>
       </div>
-      <img className='' src={img} alt={title}/>
-
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">Precio: ${precio}</li>
-        <li className="list-group-item">Stock: {stock}</li>
-      </ul>
-
       <div className="card-footer text-center">
         <Link to={`/detalles/${id}`}>
-          <button className='btn btn-info'>Ver mas detalles</button>
+          <button className="btn btn-info button-detail">Ver más detalles</button>
         </Link>
       </div>
     </div>
+  </div>
   )
 }
 
