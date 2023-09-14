@@ -12,4 +12,22 @@ Crea un componente CartWidget con un ícono y una notificación mostrando un nú
 Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado.
 Crea un componente CartWidget.js que haga rendering de un ícono Cart, e inclúyelo dentro de NavBar.js para que esté visible en todo momento.
 Crea un componente ItemListContainer. Impórtalo dentro de App.js, y abajo de NavBar.js. 
+# Entrega 2 
+1- Configura en App.js el routing usando un BrowserRouter de tu aplicación con react-router-dom
+Componentes:
+    1-Navbar con cart
+    2-Catálogo
+    3-Detalle de producto
+
+## Se debe entregar.
+### Rutas a configurar
+    ‘/’ navega a <ItemListContainer />
+    ‘/category/:id’  <ItemListContainer />
+    ‘/item/:id’ navega a <ItemDetailContainer />
+###   Links a configurar
+    Clickear en el brand debe navegar a ‘/’
+    Clickear un Item.js debe navegar a /item/:id
+    Clickear en una categoría del navbar debe navegar a /category/:categoryId 
+
+ 
 
