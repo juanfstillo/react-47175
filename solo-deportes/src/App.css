@@ -1,0 +1,30 @@
+body {
+    position: relative
+
+}
+
+.counter-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.37);
+    margin: 10px;
+    width: 500px;
+    height: 350px;
+}
+
+
+
+.btn {
+    cursor: pointer;
+}
+
+footer {
+    
+    bottom: 0;
+    width: 100%;
+    color: white;
+  }
