@@ -24,40 +24,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-async function cargarBaseDeDatos() {
-  try {
-    const response = await fetch("../data/product.json");
-    if (!response.ok) {
-      throw new Error("No se pudo cargar el archivo JSON");
-    }
-
-    const productos = await response.json();
-
-    // Utilize a transaction to add products
-    const batch = [];
-
-    productos.forEach((producto) => {
-      const docRef = collection(db, "productos");
-      const productoData = {
-        title: producto.title,
-        description: producto.description,
-        precio: producto.precio,
-        stock: producto.stock,
-        img: "",
-        categoria: producto.categoria,
-      };
-      batch.push(addDoc(docRef, productoData));
-    });
-
-    // Wait for all writes to Firestore to complete
-    await Promise.all(batch);
-
-    console.log("Datos cargados exitosamente en Firestore");
-  } catch (error) {
-    console.error("Error al cargar los datos:", error);
-  }
-}
-
 const getProducto = async (id) => {
   const item = await getDoc(doc(db, "products", id));
   return item;
@@ -86,7 +52,6 @@ const genOrder = async (data) => {
 export {
   db,
   app,
-  cargarBaseDeDatos,
   getProducto,
   getProductos,
   getProductosPorCategoria,
