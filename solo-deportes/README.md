@@ -8,7 +8,7 @@
 - `Funcionalidad 5`: Al clickear ‘Finalizar Compra’ se guarda en la base de datos una orden con todos los productos, la fecha y se da feedback del número de orden.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/22969667/193428075-d55dd1ff-5f4e-4a91-b24d-9af096ae90c6.gif" />
+<img src="https://user-images.githubusercontent.com/22969667/193428075-d55dd1ff-5f4e-4a91-b24d-9af096ae90c6.gif](https://user-images.githubusercontent.com/53223694/273237418-c1d91fa3-13af-45d8-a7b1-9ff26cb73b09.gif" />
 </p>
 <h2 align="center">Tecnologías utilizadas</h2>
 
