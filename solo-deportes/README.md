@@ -7,11 +7,11 @@
 - `Funcionalidad 4`: Al ingresar su nombre, apellido, teléfono e e-mail, se activa el botón de ‘Finalizar Compra’.
 - `Funcionalidad 5`: Al clickear ‘Finalizar Compra’ se guarda en la base de datos una orden con todos los productos, la fecha y se da feedback del número de orden.
 
-<p align="center">
+<!-- <p align="center">
 <img src="https://user-images.githubusercontent.com/22969667/193428075-d55dd1ff-5f4e-4a91-b24d-9af096ae90c6.gif" />
-</p>
+</p> -->
 <h2 align="center">Tecnologías utilizadas</h2>
 
-- React.JS 18.2.0
-- Firebase 9.10.0
-- UI Ball Loaders 1.2.6
+- React.JS
+- Firebase
+
